@@ -36,6 +36,8 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        $schedule = $request->user() ? $request->user()->account->schedules->first() : null;
+
         return array_merge(parent::share($request), [
             'auth' => function () use ($request) {
                 return [
@@ -52,6 +54,9 @@ class HandleInertiaRequests extends Middleware
                     ] : null,
                 ];
             },
+            //TODO: only necessary values,
+            'body' => $request->user() ? $request->user()->account->bodies->first() : null,
+            'newBody' => $schedule ? $schedule->getNewBody() : null,
             'flash' => function () use ($request) {
                 return [
                     'success' => $request->session()->get('success'),

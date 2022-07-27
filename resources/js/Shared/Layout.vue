@@ -6,7 +6,7 @@
         <div class="md:flex md:flex-shrink-0">
           <div class="flex items-center justify-between px-6 py-4 bg-indigo-900 md:flex-shrink-0 md:justify-center md:w-56">
             <Link class="mt-1" href="/">
-              <logo class="fill-white" width="120" height="28" />
+<!--              <logo class="fill-white" width="120" height="28" />-->
             </Link>
             <dropdown class="md:hidden" placement="bottom-end">
               <template #default>
@@ -20,7 +20,8 @@
             </dropdown>
           </div>
           <div class="md:text-md flex items-center justify-between p-4 w-full text-sm bg-white border-b md:px-12 md:py-0">
-            <div class="mr-4 mt-1">{{ auth.user.account.name }}</div>
+          <div></div>
+            <!--            <div class="mr-4 mt-1">{{ auth.user.account.name }}</div>-->
             <dropdown class="mt-1" placement="bottom-end">
               <template #default>
                 <div class="group flex items-center cursor-pointer select-none">

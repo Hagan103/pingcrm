@@ -23,6 +23,18 @@
         <icon name="printer" class="mr-2 w-4 h-4" :class="isUrl('reports') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />
         <div :class="isUrl('reports') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Reports</div>
       </Link>
+
+      <div class="mb-4">
+        <Link class="group flex items-center py-3" href="/bodies">
+<!--          <icon name="printer" class="mr-2 w-4 h-4" :class="isUrl('reports') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />-->
+          <div :class="isUrl('bodies') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Bodies</div>
+        </Link>
+
+        <Link class="group flex items-center py-3" href="/schedules">
+          <!--          <icon name="printer" class="mr-2 w-4 h-4" :class="isUrl('reports') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />-->
+          <div :class="isUrl('schedules') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Schedules</div>
+        </Link>
+      </div>
     </div>
   </div>
 </template>

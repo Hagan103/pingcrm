@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full bg-gray-100">
+<html class="h-full  bg-gray-100">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,8 @@
     @inertiaHead
 </head>
 <body class="font-sans leading-none text-gray-700 antialiased">
-    @inertia
+{{--    <div class="max-w-3xl mx-auto">--}}
+        @inertia
+{{--    </div>--}}
 </body>
 </html>

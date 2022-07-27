@@ -18,7 +18,9 @@ const webpackConfig = require('./webpack.config')
 mix
   .js('resources/js/app.js', 'public/js')
   .vue({ runtimeOnly: (process.env.NODE_ENV || 'production') === 'production' })
-  .webpackConfig(webpackConfig)
+    .copy('resources/models', 'public/models')
+    .copy('resources/images', 'public/images')
+    .webpackConfig(webpackConfig)
   .postCss('resources/css/app.css', 'public/css', [
     // prettier-ignore
     cssImport(),
@@ -27,3 +29,7 @@ mix
   ])
   .version()
   .sourceMaps()
+
+mix.options({
+    enableCssModules: true,
+});

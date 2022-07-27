@@ -31,6 +31,9 @@ module.exports = {
       },
     },
     extend: {
+        scale: {
+            '300': '3',
+        },
       borderColor: theme => ({
         DEFAULT: theme('colors.gray.200', 'currentColor'),
       }),
@@ -41,6 +44,7 @@ module.exports = {
         outline: '0 0 0 2px ' + theme('colors.indigo.500'),
       }),
       fill: theme => theme('colors'),
+
     },
   },
   variants: {
@@ -48,5 +52,7 @@ module.exports = {
       fill: ['focus', 'group-hover'],
     },
   },
-  plugins: [],
+  plugins: [
+      require('@tailwindcss/forms'),
+  ],
 }
